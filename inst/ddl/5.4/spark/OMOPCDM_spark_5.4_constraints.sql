@@ -102,6 +102,9 @@ ALTER TABLE @cdmDatabaseSchema.NOTE_NLP ADD CONSTRAINT fpk_NOTE_NLP_section_conc
 ALTER TABLE @cdmDatabaseSchema.NOTE_NLP ADD CONSTRAINT fpk_NOTE_NLP_note_nlp_concept_id FOREIGN KEY (note_nlp_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
 ALTER TABLE @cdmDatabaseSchema.NOTE_NLP ADD CONSTRAINT fpk_NOTE_NLP_note_nlp_source_concept_id FOREIGN KEY (note_nlp_source_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
 ALTER TABLE @cdmDatabaseSchema.NOTE_NLP ADD CONSTRAINT fpk_NOTE_NLP_nlp_event_field_concept_id FOREIGN KEY (nlp_event_field_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
+ALTER TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER ADD CONSTRAINT fpk_NOTE_NLP_MODIFIER_note_nlp_id FOREIGN KEY (note_nlp_id) REFERENCES @cdmDatabaseSchema.NOTE_NLP (NOTE_NLP_ID);
+ALTER TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER ADD CONSTRAINT fpk_NOTE_NLP_MODIFIER_note_nlp_modifier_field_concept_id FOREIGN KEY (note_nlp_modifier_field_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
+ALTER TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER ADD CONSTRAINT fpk_NOTE_NLP_MODIFIER_note_nlp_modifier_concept_id FOREIGN KEY (note_nlp_modifier_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
 ALTER TABLE @cdmDatabaseSchema.SPECIMEN ADD CONSTRAINT fpk_SPECIMEN_person_id FOREIGN KEY (person_id) REFERENCES @cdmDatabaseSchema.PERSON (PERSON_ID);
 ALTER TABLE @cdmDatabaseSchema.SPECIMEN ADD CONSTRAINT fpk_SPECIMEN_specimen_concept_id FOREIGN KEY (specimen_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);
 ALTER TABLE @cdmDatabaseSchema.SPECIMEN ADD CONSTRAINT fpk_SPECIMEN_specimen_type_concept_id FOREIGN KEY (specimen_type_concept_id) REFERENCES @cdmDatabaseSchema.CONCEPT (CONCEPT_ID);

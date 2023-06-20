@@ -11,6 +11,7 @@ alter table @cdmDatabaseSchema.measurement add constraint xpk_measurement primar
 alter table @cdmDatabaseSchema.observation add constraint xpk_observation primary key nonclustered (observation_id);
 alter table @cdmDatabaseSchema.note add constraint xpk_note primary key nonclustered (note_id);
 alter table @cdmDatabaseSchema.note_nlp add constraint xpk_note_nlp primary key nonclustered (note_nlp_id);
+alter table @cdmDatabaseSchema.note_nlp_modifier add constraint xpk_note_nlp_modifier primary key nonclustered (note_nlp_modifier_id);
 alter table @cdmDatabaseSchema.specimen add constraint xpk_specimen primary key nonclustered (specimen_id);
 alter table @cdmDatabaseSchema.location add constraint xpk_location primary key nonclustered (location_id);
 alter table @cdmDatabaseSchema.care_site add constraint xpk_care_site primary key nonclustered (care_site_id);

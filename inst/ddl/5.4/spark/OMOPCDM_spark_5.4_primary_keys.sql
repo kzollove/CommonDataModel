@@ -10,6 +10,7 @@ ALTER TABLE @cdmDatabaseSchema.MEASUREMENT ADD CONSTRAINT xpk_MEASUREMENT  (meas
 ALTER TABLE @cdmDatabaseSchema.OBSERVATION ADD CONSTRAINT xpk_OBSERVATION  (observation_id);
 ALTER TABLE @cdmDatabaseSchema.NOTE ADD CONSTRAINT xpk_NOTE  (note_id);
 ALTER TABLE @cdmDatabaseSchema.NOTE_NLP ADD CONSTRAINT xpk_NOTE_NLP  (note_nlp_id);
+ALTER TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER ADD CONSTRAINT xpk_NOTE_NLP_MODIFIER  (note_nlp_modifier_id);
 ALTER TABLE @cdmDatabaseSchema.SPECIMEN ADD CONSTRAINT xpk_SPECIMEN  (specimen_id);
 ALTER TABLE @cdmDatabaseSchema.LOCATION ADD CONSTRAINT xpk_LOCATION  (location_id);
 ALTER TABLE @cdmDatabaseSchema.CARE_SITE ADD CONSTRAINT xpk_CARE_SITE  (care_site_id);

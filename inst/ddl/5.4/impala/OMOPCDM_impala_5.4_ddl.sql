@@ -242,6 +242,15 @@ CREATE TABLE @cdmDatabaseSchema.NOTE_NLP (
 			term_modifiers VARCHAR(2000),
 			nlp_event_id INT,
 			nlp_event_field_concept_id INT );
+--HINT DISTRIBUTE ON RANDOM
+CREATE TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER (
+			note_nlp_modifier_id INT,
+			note_nlp_id INT,
+			note_nlp_modifier_field_concept_id INT,
+			note_nlp_modifier_date TIMESTAMP,
+			note_nlp_modifier_string VARCHAR(250),
+			note_nlp_modifier_concept_id integer NULL,
+			note_nlp_modifier_number FLOAT );
 --HINT DISTRIBUTE ON KEY (person_id)
 CREATE TABLE @cdmDatabaseSchema.SPECIMEN (
 			specimen_id INT,

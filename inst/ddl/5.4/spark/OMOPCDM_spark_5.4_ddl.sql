@@ -280,6 +280,18 @@ CAST(NULL AS integer) AS note_nlp_id,
 	CAST(NULL AS STRING) AS term_modifiers,
 	CAST(NULL AS integer) AS nlp_event_id,
 	CAST(NULL AS integer) AS nlp_event_field_concept_id  WHERE 1 = 0;
+--HINT DISTRIBUTE ON RANDOM
+CREATE TABLE @cdmDatabaseSchema.NOTE_NLP_MODIFIER  
+USING DELTA
+ AS
+SELECT
+CAST(NULL AS integer) AS note_nlp_modifier_id,
+	CAST(NULL AS integer) AS note_nlp_id,
+	CAST(NULL AS integer) AS note_nlp_modifier_field_concept_id,
+	CAST(NULL AS date) AS note_nlp_modifier_date,
+	CAST(NULL AS STRING) AS note_nlp_modifier_string,
+	CAST(NULL AS integer) AS note_nlp_modifier_concept_id,
+	CAST(NULL AS float) AS note_nlp_modifier_number  WHERE 1 = 0;
 --HINT DISTRIBUTE ON KEY (person_id)
 CREATE TABLE @cdmDatabaseSchema.SPECIMEN  
 USING DELTA

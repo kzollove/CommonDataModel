@@ -242,6 +242,15 @@ create table @cdmDatabaseSchema.note_nlp (
 			term_modifiers STRING,
 			nlp_event_id INT64 not null,
 			nlp_event_field_concept_id INT64 not null );
+--HINT DISTRIBUTE ON RANDOM
+create table @cdmDatabaseSchema.note_nlp_modifier (
+			note_nlp_modifier_id INT64 not null,
+			note_nlp_id INT64 not null,
+			note_nlp_modifier_field_concept_id INT64 not null,
+			note_nlp_modifier_date DATE,
+			note_nlp_modifier_string STRING,
+			note_nlp_modifier_concept_id INT64,
+			note_nlp_modifier_number FLOAT64 );
 --HINT DISTRIBUTE ON KEY (person_id)
 create table @cdmDatabaseSchema.specimen (
 			specimen_id INT64 not null,
